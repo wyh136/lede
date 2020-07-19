@@ -1,3 +1,6 @@
+![LEDE-CI](https://github.com/wyh136/lede/workflows/LEDE-CI/badge.svg)
+
+
 欢迎来到Lean的Openwrt源码仓库！
 =
 Welcome to Lean's  git source of OpenWrt and packages
