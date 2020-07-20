@@ -46,14 +46,14 @@ jobs:
           sed -i 's/\"#src-git\"/\"src-git\"/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-      - name: Generate configuration file
-        run: make defconfig
+#      - name: Generate configuration file
+#        run: make defconfig
 
       - name: Make download
         run: |
           make download -j8
           find dl -size -1024c -exec rm -f {} \;
-      - name: Compile firmware
+      - name: Compile firmware with phinx config
         run: |
           make -j$(nproc) || make -j1 V=s
           echo "======================="
